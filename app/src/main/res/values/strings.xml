@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">FireBirdTools</string>
+    <string name="str_shanghai">上海</string>
+    <string name="str_hangzhou">杭州</string>
+    <string name="str_beijing">北京</string>
+    <string name="str_shenzheng">深圳</string>
 </resources>
