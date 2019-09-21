@@ -36,8 +36,7 @@ public class MainActivity extends BaseActivity {
     private boolean isChangeTopToBottom = false;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+    public void afterBindView() {
         changeAnima(mRgMainBottom, mRgMainTop);
     }
 

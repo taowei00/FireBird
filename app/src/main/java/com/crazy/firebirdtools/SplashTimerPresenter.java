@@ -20,6 +20,7 @@ public class SplashTimerPresenter extends BaseMvpPresenter<ISplashActivityContra
 //        this.splashActivity = splashActivity;
 //    }
 
+    @Override
     public void initTimer() {
         mTimer = new CustomCountDownTimer(5, new CustomCountDownTimer.ICountDownHandler() {
             @Override
@@ -51,5 +52,4 @@ public class SplashTimerPresenter extends BaseMvpPresenter<ISplashActivityContra
     protected ISplashActivityContract.Iview getEmptyView() {
         return ISplashActivityContract.emptyView;
     }
-
 }

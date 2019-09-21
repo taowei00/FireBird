@@ -1,11 +1,17 @@
 package com.crazy.firebirdtools.mvp.presenter;
 
+import android.widget.ImageView;
+
 import com.crazy.firebirdtools.mvp.ILifeCircle;
 import com.crazy.firebirdtools.mvp.IMvpView;
 import com.crazy.firebirdtools.mvp.MvpControler;
 
 import java.lang.ref.WeakReference;
 
+/**
+ * 保存和获取view层引用
+ * @param <T>
+ */
 public abstract class LifeCircleMvpPresenter<T extends IMvpView> implements ILifeCircle {
 
     protected WeakReference<T> mWeakReference;

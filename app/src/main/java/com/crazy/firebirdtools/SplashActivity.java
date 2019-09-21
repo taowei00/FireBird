@@ -27,9 +27,11 @@ public class SplashActivity extends BaseActivity implements ISplashActivityContr
 
     private ISplashActivityContract.IPresenter mTimerPresenter;
 
+    /**
+     * 通过模板方法设计模式让子类强制实现这个方法
+     */
     @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+    public void afterBindView() {
         initTimerPresent();
         initListener();
         initVideo();
@@ -77,11 +79,5 @@ public class SplashActivity extends BaseActivity implements ISplashActivityContr
     public void setTvTimer(String s) {
         mTvSplashTimer.setText(s);
     }
-
-//    @Override
-//    protected void onDestroy() {
-//        super.onDestroy();
-//        mTimerPresenter.onDestroy();
-//    }
 
 }

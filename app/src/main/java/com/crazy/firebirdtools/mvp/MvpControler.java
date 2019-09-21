@@ -7,6 +7,9 @@ import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Set;
 
+/**
+ * 通过静态代理模式来同步presenter层和view层的生命周期
+ */
 public class MvpControler implements ILifeCircle{
 
     //  存放的是P层的实例

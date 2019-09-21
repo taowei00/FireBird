@@ -9,7 +9,7 @@ import com.crazy.firebirdtools.mvp.view.LifeCircleMvpActivity;
 
 import butterknife.ButterKnife;
 
-public class BaseActivity extends LifeCircleMvpActivity {
+public abstract class BaseActivity extends LifeCircleMvpActivity {
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -19,12 +19,19 @@ public class BaseActivity extends LifeCircleMvpActivity {
             int layoutId = annotation.mainLayoutid();
             if (layoutId > 0) {
                 setContentView(layoutId);
-                ButterKnife.bind(this);
+                bindView();
+                afterBindView();
             } else {
                 throw new RuntimeException("layoutId < 0");
             }
         } else {
             throw new RuntimeException("annotation = null");
         }
+    }
+
+    public abstract void afterBindView();
+
+    private void bindView() {
+        ButterKnife.bind(this);
     }
 }
