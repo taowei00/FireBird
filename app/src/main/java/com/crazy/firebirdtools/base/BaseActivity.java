@@ -1,9 +1,8 @@
-package com.crazy.firebirdtools;
+package com.crazy.firebirdtools.base;
 
 import android.os.Bundle;
 
 import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
 
 import com.crazy.firebirdtools.mvp.view.LifeCircleMvpActivity;
 

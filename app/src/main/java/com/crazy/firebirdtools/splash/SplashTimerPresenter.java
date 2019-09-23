@@ -1,9 +1,5 @@
-package com.crazy.firebirdtools;
+package com.crazy.firebirdtools.splash;
 
-import android.content.Intent;
-
-import com.crazy.firebirdtools.mvp.IMvpView;
-import com.crazy.firebirdtools.mvp.ISplashActivityContract;
 import com.crazy.firebirdtools.mvp.base.BaseMvpPresenter;
 
 public class SplashTimerPresenter extends BaseMvpPresenter<ISplashActivityContract.Iview> implements ISplashActivityContract.IPresenter {

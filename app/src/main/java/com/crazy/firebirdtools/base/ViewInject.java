@@ -1,4 +1,4 @@
-package com.crazy.firebirdtools;
+package com.crazy.firebirdtools.base;
 
 import java.lang.annotation.Retention;
 import java.lang.annotation.Target;

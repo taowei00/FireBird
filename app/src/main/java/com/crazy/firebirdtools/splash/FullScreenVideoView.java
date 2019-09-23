@@ -1,4 +1,4 @@
-package com.crazy.firebirdtools;
+package com.crazy.firebirdtools.splash;
 
 import android.content.Context;
 import android.util.AttributeSet;

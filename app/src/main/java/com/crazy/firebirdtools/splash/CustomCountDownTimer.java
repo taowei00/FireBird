@@ -1,4 +1,4 @@
-package com.crazy.firebirdtools;
+package com.crazy.firebirdtools.splash;
 
 import android.os.Handler;
 

@@ -1,21 +1,21 @@
-package com.crazy.firebirdtools;
+package com.crazy.firebirdtools.splash;
 
 import android.content.Intent;
 import android.media.MediaPlayer;
 import android.net.Uri;
-import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
 import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
 
-import com.crazy.firebirdtools.mvp.ISplashActivityContract;
+import com.crazy.firebirdtools.base.BaseActivity;
+import com.crazy.firebirdtools.main.MainActivity;
+import com.crazy.firebirdtools.R;
+import com.crazy.firebirdtools.base.ViewInject;
 
 import java.io.File;
 
 import butterknife.BindView;
-import butterknife.ButterKnife;
 
 @ViewInject(mainLayoutid = R.layout.activity_splash)
 public class SplashActivity extends BaseActivity implements ISplashActivityContract.Iview {

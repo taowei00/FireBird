@@ -1,4 +1,8 @@
-package com.crazy.firebirdtools.mvp;
+package com.crazy.firebirdtools.splash;
+
+import com.crazy.firebirdtools.mvp.ILifeCircle;
+import com.crazy.firebirdtools.mvp.IMvpView;
+import com.crazy.firebirdtools.mvp.MvpControler;
 
 public interface ISplashActivityContract {
 
