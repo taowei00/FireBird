@@ -26,6 +26,10 @@
             android:name=".main.MainActivity"
             android:configChanges="orientation|screenSize|keyboardHidden">
         </activity>
+        <activity
+            android:name=".main.shanghai.view.ShanhaiDetailActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden">
+        </activity>
     </application>
 
 </manifest>

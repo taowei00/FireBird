@@ -17,7 +17,7 @@ import butterknife.ButterKnife;
 
 public abstract class BaseFragment extends LifeCircleMvpFragment {
 
-    private Context mContext;
+    protected Context mContext;
     @Override
     public void onAttach(@NonNull Context context) {
         super.onAttach(context);
@@ -66,6 +66,6 @@ public abstract class BaseFragment extends LifeCircleMvpFragment {
     public abstract void afterBindView();
 
     private void bindView(View view) {
-        ButterKnife.bind(view);
+        ButterKnife.bind(this, view);
     }
 }
