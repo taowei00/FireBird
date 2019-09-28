@@ -10,7 +10,7 @@ import com.crazy.firebirdtools.main.hangzhou.HangzhouFragment;
 import com.crazy.firebirdtools.main.shanghai.ShangHaiFragment;
 import com.crazy.firebirdtools.main.shenzhen.ShenZhenFragment;
 import com.crazy.firebirdtools.main.tools.MainConstantTool;
-import com.crazy.firebirdtools.mvp.base.BaseMvpPresenter;
+import com.crazy.mvp.mvp.base.BaseMvpPresenter;
 
 public class MainActivityPresenter extends BaseMvpPresenter<IMainActivityContract.Iview> implements IMainActivityContract.IPresenter {
 

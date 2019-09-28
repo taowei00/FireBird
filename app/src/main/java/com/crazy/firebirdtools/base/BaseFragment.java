@@ -10,8 +10,8 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
-import com.crazy.firebirdtools.mvp.view.LifeCircleMvpActivity;
-import com.crazy.firebirdtools.mvp.view.LifeCircleMvpFragment;
+import com.crazy.mvp.mvp.view.LifeCircleMvpActivity;
+import com.crazy.mvp.mvp.view.LifeCircleMvpFragment;
 
 import butterknife.ButterKnife;
 

@@ -1,4 +1,4 @@
-package com.crazy.firebirdtools.mvp.view;
+package com.crazy.mvp.mvp.view;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -7,8 +7,8 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.crazy.firebirdtools.mvp.IMvpView;
-import com.crazy.firebirdtools.mvp.MvpControler;
+import com.crazy.mvp.mvp.IMvpView;
+import com.crazy.mvp.mvp.MvpControler;
 
 public class LifeCircleMvpActivity extends AppCompatActivity implements IMvpView {
 

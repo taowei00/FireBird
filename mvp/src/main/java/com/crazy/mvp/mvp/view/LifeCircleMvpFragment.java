@@ -1,4 +1,4 @@
-package com.crazy.firebirdtools.mvp.view;
+package com.crazy.mvp.mvp.view;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,8 +9,8 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
-import com.crazy.firebirdtools.mvp.IMvpView;
-import com.crazy.firebirdtools.mvp.MvpControler;
+import com.crazy.mvp.mvp.IMvpView;
+import com.crazy.mvp.mvp.MvpControler;
 
 public class LifeCircleMvpFragment extends Fragment implements IMvpView {
 

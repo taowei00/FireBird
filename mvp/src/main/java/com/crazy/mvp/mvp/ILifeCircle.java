@@ -1,4 +1,4 @@
-package com.crazy.firebirdtools.mvp;
+package com.crazy.mvp.mvp;
 
 import android.content.Intent;
 import android.os.Bundle;

@@ -4,7 +4,7 @@ import android.os.Bundle;
 
 import androidx.annotation.Nullable;
 
-import com.crazy.firebirdtools.mvp.view.LifeCircleMvpActivity;
+import com.crazy.mvp.mvp.view.LifeCircleMvpActivity;
 
 import butterknife.ButterKnife;
 

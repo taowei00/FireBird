@@ -2,9 +2,9 @@ package com.crazy.firebirdtools.main;
 
 import androidx.fragment.app.Fragment;
 
-import com.crazy.firebirdtools.mvp.ILifeCircle;
-import com.crazy.firebirdtools.mvp.IMvpView;
-import com.crazy.firebirdtools.mvp.MvpControler;
+import com.crazy.mvp.mvp.ILifeCircle;
+import com.crazy.mvp.mvp.IMvpView;
+import com.crazy.mvp.mvp.MvpControler;
 
 public interface IMainActivityContract {
 

@@ -2,6 +2,7 @@ package com.crazy.firebirdtools.main.shanghai.view;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Canvas;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
@@ -17,7 +18,16 @@ import com.crazy.firebirdtools.R;
 import com.crazy.firebirdtools.base.BaseActivity;
 import com.crazy.firebirdtools.base.ViewInject;
 
+import org.jetbrains.annotations.NotNull;
+
+import java.io.IOException;
+
 import butterknife.BindView;
+import okhttp3.Call;
+import okhttp3.Callback;
+import okhttp3.OkHttpClient;
+import okhttp3.Request;
+import okhttp3.Response;
 
 @ViewInject(mainLayoutid = R.layout.activity_shanghai_detail)
 public class ShanhaiDetailActivity extends BaseActivity {
@@ -29,6 +39,26 @@ public class ShanhaiDetailActivity extends BaseActivity {
     @Override
     public void afterBindView() {
         initAnimation();
+        initGetNeyData();
+    }
+
+    private void initGetNeyData() {
+        OkHttpClient client = new OkHttpClient();
+        Request request = new Request.Builder().build();
+        Call call = client.newCall(request);
+        call.enqueue(new Callback() {
+            @Override
+            public void onFailure(@NotNull Call call, @NotNull IOException e) {
+
+            }
+
+            @Override
+            public void onResponse(@NotNull Call call, @NotNull Response response) throws IOException {
+
+            }
+        });
+
+
     }
 
     private void initAnimation() {

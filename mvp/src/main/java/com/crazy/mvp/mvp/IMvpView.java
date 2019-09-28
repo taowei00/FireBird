@@ -1,4 +1,4 @@
-package com.crazy.firebirdtools.mvp;
+package com.crazy.mvp.mvp;
 
 public interface IMvpView {
 

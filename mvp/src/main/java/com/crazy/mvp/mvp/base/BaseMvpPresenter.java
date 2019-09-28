@@ -1,10 +1,10 @@
-package com.crazy.firebirdtools.mvp.base;
+package com.crazy.mvp.mvp.base;
 
 import android.content.Intent;
 import android.os.Bundle;
 
-import com.crazy.firebirdtools.mvp.IMvpView;
-import com.crazy.firebirdtools.mvp.presenter.LifeCircleMvpPresenter;
+import com.crazy.mvp.mvp.IMvpView;
+import com.crazy.mvp.mvp.presenter.LifeCircleMvpPresenter;
 
 /**
  * p层的中间类

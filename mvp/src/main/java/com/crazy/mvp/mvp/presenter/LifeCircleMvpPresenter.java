@@ -1,10 +1,10 @@
-package com.crazy.firebirdtools.mvp.presenter;
+package com.crazy.mvp.mvp.presenter;
 
 import android.widget.ImageView;
 
-import com.crazy.firebirdtools.mvp.ILifeCircle;
-import com.crazy.firebirdtools.mvp.IMvpView;
-import com.crazy.firebirdtools.mvp.MvpControler;
+import com.crazy.mvp.mvp.ILifeCircle;
+import com.crazy.mvp.mvp.IMvpView;
+import com.crazy.mvp.mvp.MvpControler;
 
 import java.lang.ref.WeakReference;
 
