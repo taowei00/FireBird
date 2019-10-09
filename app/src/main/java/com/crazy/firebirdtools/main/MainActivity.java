@@ -104,13 +104,6 @@ public class MainActivity extends BaseActivity implements IMainActivityContract.
         getSupportFragmentManager().beginTransaction().hide(fragment).commit();
     }
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        // TODO: add setContentView(...) invocation
-        ButterKnife.bind(this);
-    }
-
     @OnClick({R.id.fac_main_home, R.id.rb_main_shanghai, R.id.rb_main_hangzhou, R.id.rb_main_beijing, R.id.rb_main_shenzheng})
     public void onViewClicked(View view) {
         switch (view.getId()) {

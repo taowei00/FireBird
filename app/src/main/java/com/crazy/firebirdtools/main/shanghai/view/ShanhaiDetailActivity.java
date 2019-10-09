@@ -17,6 +17,7 @@ import androidx.core.view.ViewCompat;
 import com.crazy.firebirdtools.R;
 import com.crazy.firebirdtools.base.BaseActivity;
 import com.crazy.firebirdtools.base.ViewInject;
+import com.crazy.firebirdtools.main.shanghai.module.ShanghaiDetailHttpTask;
 
 import org.jetbrains.annotations.NotNull;
 
@@ -43,7 +44,8 @@ public class ShanhaiDetailActivity extends BaseActivity {
     }
 
     private void initGetNeyData() {
-        OkHttpClient client = new OkHttpClient();
+        Object desc = new ShanghaiDetailHttpTask().getXiaoHuaList("desc", "1", "1");
+        /*OkHttpClient client = new OkHttpClient();
         Request request = new Request.Builder().build();
         Call call = client.newCall(request);
         call.enqueue(new Callback() {
@@ -56,7 +58,7 @@ public class ShanhaiDetailActivity extends BaseActivity {
             public void onResponse(@NotNull Call call, @NotNull Response response) throws IOException {
 
             }
-        });
+        });*/
 
 
     }
