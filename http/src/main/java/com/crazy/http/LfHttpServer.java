@@ -1,12 +1,13 @@
 package com.crazy.http;
 
 import com.crazy.http.request.IRequest;
+import com.crazy.http.result.IResult;
 
 import java.util.Map;
 
-public class LfHttpTask {
+public class LfHttpServer {
 
-    protected Object execute(IRequest iRequest, Map<String, Object> params) {
+    protected <T> IResult<T> execute(IRequest iRequest, Map<String, Object> params) {
         return HttpHelper.execute(iRequest, params);
     }
 
