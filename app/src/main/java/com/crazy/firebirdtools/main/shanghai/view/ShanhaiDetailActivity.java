@@ -18,6 +18,7 @@ import androidx.core.view.ViewCompat;
 import com.crazy.firebirdtools.R;
 import com.crazy.firebirdtools.base.BaseActivity;
 import com.crazy.firebirdtools.base.ViewInject;
+import com.crazy.firebirdtools.main.shanghai.dto.ShangHaiDetailBean;
 import com.crazy.firebirdtools.main.shanghai.manager.GetXiaoHuaTask;
 import com.crazy.firebirdtools.main.shanghai.presenter.IShangHaiDetailContract;
 import com.crazy.firebirdtools.main.shanghai.presenter.ShangHaiDetailPresenter;
@@ -51,7 +52,7 @@ public class ShanhaiDetailActivity extends BaseActivity implements IShangHaiDeta
     }
 
     private void initGetNeyData() {
-        mPresenter.getNetData();
+        mPresenter.getNetData(10);
 
 //        GetXiaoHuaTask xiaoHuaTask = new GetXiaoHuaTask();
 //        xiaoHuaTask.execute("desc", "1", "1");
@@ -103,5 +104,10 @@ public class ShanhaiDetailActivity extends BaseActivity implements IShangHaiDeta
                     ActivityOptionsCompat.makeSceneTransitionAnimation(activity, pair);
             ActivityCompat.startActivity(activity, intent, optionsCompat.toBundle());
         }
+    }
+
+    @Override
+    public void showData(ShangHaiDetailBean data) {
+
     }
 }
