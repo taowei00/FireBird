@@ -1,5 +1,7 @@
 package com.crazy.firebirdtools.main.hangzhou.view;
 
+import android.view.animation.AnimationUtils;
+
 import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -39,6 +41,7 @@ public class ZhiHuFragment extends BaseFragment implements IShangHaiDetailContra
     public void showData(ShangHaiDetailBean data) {
         if (mZhihuRecyclerview.getAdapter() == null) {
             ZhiHuAdapter zhiHuAdapter = new ZhiHuAdapter(getActivity(), data.result.data);
+            mZhihuRecyclerview.setAnimation(AnimationUtils.loadAnimation(mContext, R.anim.zhihu_recyclerview_show));
             mZhihuRecyclerview.setAdapter(zhiHuAdapter);
         }
     }

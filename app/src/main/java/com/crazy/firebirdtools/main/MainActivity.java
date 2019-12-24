@@ -3,14 +3,17 @@ package com.crazy.firebirdtools.main;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.FrameLayout;
+import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
 import androidx.fragment.app.Fragment;
 
+import com.airbnb.lottie.LottieAnimationView;
 import com.crazy.firebirdtools.R;
 import com.crazy.firebirdtools.base.BaseActivity;
 import com.crazy.firebirdtools.base.ViewInject;
@@ -28,11 +31,11 @@ public class MainActivity extends BaseActivity implements IMainActivityContract.
     @BindView(R.id.fac_main_home)
     FloatingActionButton mFacMainHome;
     @BindView(R.id.rb_main_shanghai)
-    RadioButton mRbMainShanghai;
+    LottieAnimationView mRbMainShanghai;
     @BindView(R.id.rb_main_hangzhou)
-    RadioButton mRbMainHangzhou;
+    LottieAnimationView mRbMainHangzhou;
     @BindView(R.id.rg_main_top)
-    RadioGroup mRgMainTop;
+    LinearLayout mRgMainTop;
     @BindView(R.id.fl_main_bottom)
     FrameLayout mFlMainBottom;
     @BindView(R.id.rb_main_beijing)
@@ -48,6 +51,9 @@ public class MainActivity extends BaseActivity implements IMainActivityContract.
     public void afterBindView() {
         initHomeFragment();
         changeAnima(mRgMainBottom, mRgMainTop);
+
+        mRbMainShanghai.playAnimation();
+        mRbMainHangzhou.reverseAnimation();
     }
 
     /**
@@ -60,10 +66,12 @@ public class MainActivity extends BaseActivity implements IMainActivityContract.
     private void handlerBottomPosition() {
         if (mPresenter.getCurrentTopIndex() != MainConstantTool.HANGZHOU) {
             mPresenter.replaceFragment(MainConstantTool.SHANGHAI);
-            mRbMainShanghai.setChecked(true);
+//            mRbMainShanghai.setChecked(true);
+            mRbMainShanghai.playAnimation();
         } else {
             mPresenter.replaceFragment(MainConstantTool.HANGZHOU);
-            mRbMainHangzhou.setChecked(true);
+//            mRbMainHangzhou.setChecked(true);
+            mRbMainHangzhou.playAnimation();
         }
     }
 
@@ -77,7 +85,7 @@ public class MainActivity extends BaseActivity implements IMainActivityContract.
         }
     }
 
-    private void changeAnima(RadioGroup gone, RadioGroup show) {
+    private void changeAnima(ViewGroup gone, ViewGroup show) {
         gone.clearAnimation();
         Animation animationGone = AnimationUtils.loadAnimation(this, R.anim.main_tab_translate_hide);
         gone.startAnimation(animationGone);
@@ -109,9 +117,13 @@ public class MainActivity extends BaseActivity implements IMainActivityContract.
         switch (view.getId()) {
             case R.id.rb_main_shanghai:
                 mPresenter.replaceFragment(0);
+                mRbMainShanghai.playAnimation();
+                mRbMainHangzhou.reverseAnimation();
                 break;
             case R.id.rb_main_hangzhou:
                 mPresenter.replaceFragment(1);
+                mRbMainHangzhou.playAnimation();
+                mRbMainShanghai.reverseAnimation();
                 break;
             case R.id.rb_main_beijing:
                 mPresenter.replaceFragment(2);

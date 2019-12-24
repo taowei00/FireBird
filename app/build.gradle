@@ -41,6 +41,7 @@ dependencies {
     implementation 'com.jakewharton:butterknife:10.2.0'
     annotationProcessor 'com.jakewharton:butterknife-compiler:10.2.0'
     implementation 'com.google.android.material:material:1.0.0'
+    implementation 'com.airbnb.android:lottie:2.2.5'
 
     //  okhttp
     implementation("com.squareup.okhttp3:okhttp:4.2.0")
