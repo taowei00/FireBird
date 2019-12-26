@@ -6,7 +6,8 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentStatePagerAdapter;
 
-import com.crazy.firebirdtools.main.hangzhou.jike.JiKeFragment;
+import com.crazy.firebirdtools.main.hangzhou.view.JiKeFragment;
+import com.crazy.firebirdtools.main.hangzhou.view.RefreshFragment;
 import com.crazy.firebirdtools.main.hangzhou.view.ZhiHuFragment;
 
 import java.util.ArrayList;
@@ -24,6 +25,7 @@ public class HangZhouViewPagerAdapter extends FragmentStatePagerAdapter {
         super(fm, behavior);
         titleList.add("知乎");
         titleList.add("即刻");
+        titleList.add("下拉刷新");
     }
 
     @NonNull
@@ -32,6 +34,7 @@ public class HangZhouViewPagerAdapter extends FragmentStatePagerAdapter {
         switch (position) {
             case 0: return new ZhiHuFragment();
             case 1: return new JiKeFragment();
+            case 2: return new RefreshFragment();
         }
         return null;
     }

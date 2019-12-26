@@ -6,7 +6,7 @@ import androidx.fragment.app.Fragment;
 
 import com.crazy.firebirdtools.R;
 import com.crazy.firebirdtools.main.beijing.BeijingFragment;
-import com.crazy.firebirdtools.main.hangzhou.view.HangzhouFragment;
+import com.crazy.firebirdtools.main.hangzhou.HangzhouFragment;
 import com.crazy.firebirdtools.main.shanghai.ShangHaiFragment;
 import com.crazy.firebirdtools.main.shenzhen.ShenZhenFragment;
 import com.crazy.firebirdtools.main.tools.MainConstantTool;

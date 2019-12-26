@@ -1,4 +1,4 @@
-package com.crazy.firebirdtools.main.hangzhou.view;
+package com.crazy.firebirdtools.main.hangzhou;
 
 import androidx.fragment.app.FragmentStatePagerAdapter;
 import androidx.viewpager.widget.ViewPager;

@@ -1,4 +1,4 @@
-package com.crazy.firebirdtools.main.hangzhou.jike;
+package com.crazy.firebirdtools.main.hangzhou.view;
 
 import com.crazy.firebirdtools.R;
 import com.crazy.firebirdtools.base.BaseFragment;
