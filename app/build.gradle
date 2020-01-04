@@ -6,14 +6,32 @@ android {
         applicationId "com.crazy.firebirdtools"
         minSdkVersion Integer.valueOf(min_sdk_version)
         targetSdkVersion Integer.valueOf(target_sdk_version)
-        versionCode Integer.valueOf(version_code)
-        versionName version_name
+        //  在根目录的gradle.properties中做了配置
+//        versionCode Integer.valueOf(version_code)
+//        versionName version_name
+
+        //   在根目录的build.gradle中做了配置
+        versionCode rootProject.ext.versionCode
+        versionName rootProject.ext.versionName
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
+
+    signingConfigs {
+        firebird {
+            keyAlias rootProject.ext.keystore['keyAlias']
+            keyPassword rootProject.ext.keystore['keyPassword']
+//            storeFile file(rootProject.ext.keystore['storeFile'])
+            storeFile file('../../filrpack.jks')
+            storePassword rootProject.ext.keystore['storePassword']
+        }
+    }
+
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            versionNameSuffix "_release"
+            signingConfig signingConfigs.firebird
         }
     }
 

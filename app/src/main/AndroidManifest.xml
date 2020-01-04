@@ -13,6 +13,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:replace="android:appComponentFactory"
+        android:usesCleartextTraffic="true"
         android:appComponentFactory="butterknife">
         <activity
             android:name=".splash.SplashActivity"

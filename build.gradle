@@ -1,3 +1,5 @@
+import java.text.SimpleDateFormat
+
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 
 buildscript {
@@ -22,6 +24,44 @@ allprojects {
         jcenter()
         
     }
+}
+
+/**
+ * 获取当前日期时间
+ * @return
+ */
+def getVersionNameByDate() {
+    def sdf = new SimpleDateFormat("yyyy.MM.dd.HH", Locale.CHINA)
+    def dateStr = sdf.format(new Date())
+    return dateStr
+}
+
+/**
+ * 获取当前时间戳
+ * @return
+ */
+def getTimestamp() {
+    return (Integer) Math.round(System.currentTimeMillis() / 1000);
+}
+
+def getKeystoreProperties() {
+    // Create a variable called keystorePropertiesFile, and initialize it to your
+    // keystore.properties file, in the rootProject folder.
+    def keystorePropertiesFile = rootProject.file("keystore.properties")
+
+    // Initialize a new Properties() object called keystoreProperties.
+    def keystoreProperties = new Properties()
+
+    // Load your keystore.properties file into the keystoreProperties object.
+    keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
+
+    return keystoreProperties;
+}
+
+ext {
+    versionCode = getTimestamp()
+    versionName = getVersionNameByDate()
+    keystore = getKeystoreProperties()
 }
 
 task clean(type: Delete) {
