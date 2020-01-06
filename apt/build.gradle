@@ -1,0 +1,16 @@
+apply plugin: 'java-library'
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    //  配合apt生成java文件
+    implementation 'com.squareup:javapoet:1.9.0'
+    //  在特定路径下生成apt相关的配置文件
+    implementation 'com.google.auto.service:auto-service:1.0-rc3'
+    // Gradle 5.0忽略了compile classpath中的annotation processor，需要手动添加下面这行代码
+    annotationProcessor 'com.google.auto.service:auto-service:1.0-rc3'
+
+    implementation project(':annotation')
+}
+
+sourceCompatibility = "7"
+targetCompatibility = "7"

@@ -1,8 +1,9 @@
 package com.crazy.firebirdtools.splash;
 
+import com.crazy.firebirdtools.base.BasePresenter;
 import com.crazy.mvp.mvp.base.BaseMvpPresenter;
 
-public class SplashTimerPresenter extends BaseMvpPresenter<ISplashActivityContract.Iview> implements ISplashActivityContract.IPresenter {
+public class SplashTimerPresenter extends BasePresenter<ISplashActivityContract.Iview> implements ISplashActivityContract.IPresenter {
 
     private CustomCountDownTimer mTimer;
 
@@ -44,8 +45,8 @@ public class SplashTimerPresenter extends BaseMvpPresenter<ISplashActivityContra
         cancel();
     }
 
-    @Override
-    protected ISplashActivityContract.Iview getEmptyView() {
-        return ISplashActivityContract.emptyView;
-    }
+//    @Override
+//    protected ISplashActivityContract.Iview getEmptyView() {
+//        return ISplashActivityContract.emptyView;
+//    }
 }

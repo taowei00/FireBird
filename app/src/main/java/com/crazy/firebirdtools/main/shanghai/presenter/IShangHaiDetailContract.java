@@ -1,11 +1,14 @@
 package com.crazy.firebirdtools.main.shanghai.presenter;
 
+import com.crazy.annotation.MvpEmptyViewFactory;
 import com.crazy.firebirdtools.main.shanghai.dto.ShangHaiDetailBean;
 import com.crazy.mvp.mvp.ILifeCircle;
 import com.crazy.mvp.mvp.IMvpView;
 import com.crazy.mvp.mvp.MvpControler;
 
 public interface IShangHaiDetailContract {
+
+    @MvpEmptyViewFactory
     interface Iview extends IMvpView {
 
         void showData(ShangHaiDetailBean data);
@@ -16,7 +19,7 @@ public interface IShangHaiDetailContract {
         void getNetData(int pageSize);
     }
 
-    Iview emptyView = new Iview() {
+    /*Iview emptyView = new Iview() {
 
         @Override
         public void showData(ShangHaiDetailBean data) {
@@ -27,5 +30,5 @@ public interface IShangHaiDetailContract {
         public MvpControler getMvpControler() {
             return null;
         }
-    };
+    };*/
 }

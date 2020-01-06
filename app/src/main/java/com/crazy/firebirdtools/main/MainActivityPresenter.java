@@ -5,6 +5,7 @@ import android.util.Log;
 import androidx.fragment.app.Fragment;
 
 import com.crazy.firebirdtools.R;
+import com.crazy.firebirdtools.base.BasePresenter;
 import com.crazy.firebirdtools.main.beijing.BeijingFragment;
 import com.crazy.firebirdtools.main.hangzhou.HangzhouFragment;
 import com.crazy.firebirdtools.main.shanghai.ShangHaiFragment;
@@ -12,7 +13,7 @@ import com.crazy.firebirdtools.main.shenzhen.ShenZhenFragment;
 import com.crazy.firebirdtools.main.tools.MainConstantTool;
 import com.crazy.mvp.mvp.base.BaseMvpPresenter;
 
-public class MainActivityPresenter extends BaseMvpPresenter<IMainActivityContract.Iview> implements IMainActivityContract.IPresenter {
+public class MainActivityPresenter extends BasePresenter<IMainActivityContract.Iview> implements IMainActivityContract.IPresenter {
 
     public static final String TAG = MainActivityPresenter.class.getSimpleName();
     // 当前fragment的角标
@@ -26,10 +27,10 @@ public class MainActivityPresenter extends BaseMvpPresenter<IMainActivityContrac
         super(view);
     }
 
-    @Override
-    protected IMainActivityContract.Iview getEmptyView() {
-        return IMainActivityContract.emptyView;
-    }
+//    @Override
+//    protected IMainActivityContract.Iview getEmptyView() {
+//        return IMainActivityContract.emptyView;
+//    }
 
     @Override
     public void initHomeFragment() {

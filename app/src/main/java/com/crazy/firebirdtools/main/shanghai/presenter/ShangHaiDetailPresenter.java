@@ -25,10 +25,10 @@ public class ShangHaiDetailPresenter extends BasePresenter<IShangHaiDetailContra
         super(view);
     }
 
-    @Override
-    protected IShangHaiDetailContract.Iview getEmptyView() {
-        return IShangHaiDetailContract.emptyView;
-    }
+//    @Override
+//    protected IShangHaiDetailContract.Iview getEmptyView() {
+//        return IShangHaiDetailContract.emptyView;
+//    }
 
     @Override
     public void getNetData(int pageSize) {
