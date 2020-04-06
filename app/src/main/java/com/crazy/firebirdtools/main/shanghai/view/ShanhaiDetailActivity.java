@@ -2,38 +2,21 @@ package com.crazy.firebirdtools.main.shanghai.view;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.graphics.Canvas;
 import android.os.Build;
-import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
-
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.app.ActivityOptionsCompat;
 import androidx.core.util.Pair;
-import androidx.core.view.ViewCompat;
 
 import com.crazy.firebirdtools.R;
 import com.crazy.firebirdtools.base.BaseActivity;
 import com.crazy.firebirdtools.base.ViewInject;
 import com.crazy.firebirdtools.main.shanghai.dto.ShangHaiDetailBean;
-import com.crazy.firebirdtools.main.shanghai.manager.GetXiaoHuaTask;
 import com.crazy.firebirdtools.main.shanghai.presenter.IShangHaiDetailContract;
 import com.crazy.firebirdtools.main.shanghai.presenter.ShangHaiDetailPresenter;
 
-import org.jetbrains.annotations.NotNull;
-
-import java.io.IOException;
-
 import butterknife.BindView;
-import okhttp3.Call;
-import okhttp3.Callback;
-import okhttp3.HttpUrl;
-import okhttp3.OkHttpClient;
-import okhttp3.Request;
-import okhttp3.Response;
 
 @ViewInject(mainLayoutid = R.layout.activity_shanghai_detail)
 public class ShanhaiDetailActivity extends BaseActivity implements IShangHaiDetailContract.Iview {
